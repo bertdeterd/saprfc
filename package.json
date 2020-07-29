@@ -1,7 +1,7 @@
 {
-  "name": "npm-sap-rfc",
+  "name": "saprfc",
   "version": "1.0.0",
-  "description": "",
+  "description": "Call SAP Remote Function Modules with Ease",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +16,6 @@
     "axios": "^0.19.2",
     "xml2js": "^0.4.23",
     "xmlbuilder": "^15.1.1"
-  }
+  },
+  "typings": "types/index.d.ts"
 }
