@@ -11,5 +11,10 @@
     "url": "https://bertdeterd@dev.azure.com/bertdeterd/npm-sap-rfc/_git/npm-sap-rfc"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "xml2js": "^0.4.23",
+    "xmlbuilder": "^15.1.1"
+  }
 }
