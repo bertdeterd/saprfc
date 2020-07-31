@@ -64,4 +64,16 @@ rfcbuilder.prototype.castToArray = function(r) {
   }
 };
 
+
+rfcbuilder.prototype.abapBoolean = function(b){
+    switch(b){
+      case false:
+        return "";
+      case true:
+        return "X";
+      default:
+        return "";    
+    }
+  }
+
 export default rfcbuilder;
