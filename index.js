@@ -34,7 +34,7 @@ rfcbuilder.prototype.call = async function(req) {
     this.requestbody = this.root.end({ pretty: false });
     this.request = this.soapprefix + this.requestbody + this.soappostfix;
   }
-  return await axios.post(process.env.VUE_APP_SAPSOAPURI ?? process.env.REACT_APP_SAPSOAPURI , this.request, {
+  return await axios.post(process.env.VUE_APP_SAPSOAPURI || process.env.REACT_APP_SAPSOAPURI , this.request, {
     headers: { "Content-Type": "text/xml" },
   });
 };
