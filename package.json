@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bertdeterd@dev.azure.com/bertdeterd/npm-sap-rfc/_git/npm-sap-rfc"
+    "url": "https://github.com/bertdeterd/saprfc.git"
   },
   "author": "",
   "license": "ISC",
@@ -17,5 +17,6 @@
     "xml2js": "^0.4.23",
     "xmlbuilder": "^15.1.1"
   },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "typings": "types/index.d.ts"
 }
