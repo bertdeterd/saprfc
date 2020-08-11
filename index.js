@@ -74,6 +74,17 @@ rfcbuilder.prototype.abapBoolean = function(b){
       default:
         return "";    
     }
+  };
+
+
+  rfcbuilder.convertAbapMessageType = function(t){
+    switch(t){
+      case 'S': return "success"; 
+      case 'E': return "error"; 
+      case 'W': return "warning"; 
+      case 'I': return "information"; 
+      default: return t
   }
+  }  
 
 export default rfcbuilder;
