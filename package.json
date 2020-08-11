@@ -17,5 +17,12 @@
     "xml2js": "^0.4.23",
     "xmlbuilder": "^15.1.1"
   },
+  "keywords": [
+      "SAP",
+      "Functionmodule",
+      "SE37",
+      "ABAP",
+      "ECC"
+  ],
   "typings": "types/index.d.ts"
 }
