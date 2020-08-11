@@ -1,6 +1,6 @@
 {
   "name": "saprfc",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Call SAP Remote Function Modules with Ease",
   "main": "index.js",
   "scripts": {
@@ -18,11 +18,11 @@
     "xmlbuilder": "^15.1.1"
   },
   "keywords": [
-      "SAP",
-      "Functionmodule",
-      "SE37",
-      "ABAP",
-      "ECC"
+    "SAP",
+    "Functionmodule",
+    "SE37",
+    "ABAP",
+    "ECC"
   ],
   "typings": "types/index.d.ts"
 }
