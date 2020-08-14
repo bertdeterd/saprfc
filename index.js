@@ -59,6 +59,8 @@ rfcbuilder.prototype.castToArray = function(r) {
   switch (typeof r) {
     case "string":
       return [];
+    case undefined:
+      return [];  
     case "object":
       return Array.isArray(r) ? r : [r];
   }

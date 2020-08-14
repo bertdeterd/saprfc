@@ -44,9 +44,9 @@ For complex calls you can use javascript<br>
     } )
 const { USERLIST } = rfc.json(xml);
 state.users = rfc.castToArray(USERLIST.item) 
-//state.users results in : [ { FULLNAME: "S.A.P. Test", LASTNAME: "Test", USERNAME: "100000" }, .....]
+//state.users results in : [ { FULLNAME: "S.A.P. Test", LASTNAME: "Test", USERNAME: "100000" }, .....]  
 ```
-
+<br>
 For even more complex calls you can get the root object with getRoot() and build the request payload yourself. See the documentation from xmlbuilder package how to do that:<br>
 ```javascript
 const root = rfc.getRoot()
