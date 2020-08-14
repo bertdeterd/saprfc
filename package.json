@@ -1,6 +1,6 @@
 {
   "name": "saprfc",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Call SAP Remote Function Modules with Ease",
   "main": "index.js",
   "scripts": {
