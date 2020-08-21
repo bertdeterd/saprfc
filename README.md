@@ -1,6 +1,6 @@
 # SAP RFC 
 
-[![License](http://img.shields.io/npm/l/saprfc.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![License](http://img.shields.io/npm/l/saprfc.svg?style=flat-square)](http://opensource.org/licenses/ISC)
 [![NPM Version](http://img.shields.io/npm/v/saprfc.svg?style=flat-square)](https://npmjs.com/package/saprfc)
 [![NPM Downloads](https://img.shields.io/npm/dm/saprfc.svg?style=flat-square)](https://npmjs.com/package/saprfc)
 
