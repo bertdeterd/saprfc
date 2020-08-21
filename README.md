@@ -1,5 +1,9 @@
 # SAP RFC 
 
+[![License](http://img.shields.io/npm/l/saprfc.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![NPM Version](http://img.shields.io/npm/v/saprfc.svg?style=flat-square)](https://npmjs.com/package/saprfc)
+[![NPM Downloads](https://img.shields.io/npm/dm/saprfc.svg?style=flat-square)](https://npmjs.com/package/saprfc)
+
 Call RFC modules from SAP with Ease. <br>
 No need for creating SAP Gateway oData services or creating them through SAP API Management<br>
 If your app has access to the ABAP Backend, just call a Remote Function Module (SE37) directly.<br>
@@ -47,7 +51,8 @@ state.users = rfc.castToArray(USERLIST.item)
 //state.users results in : [ { FULLNAME: "S.A.P. Test", LASTNAME: "Test", USERNAME: "100000" }, .....]  
 ```
 <br>
-For even more complex calls you can get the root object with getRoot() and build the request payload yourself. See the documentation from xmlbuilder package how to do that:<br>
+For even more complex calls you can get the root object with getRoot() and build the request payload yourself. See the documentation from xmlbuilder package how to do that. You can do a lot with plain JS though so probably you do not need this:<br>
+
 ```javascript
 const root = rfc.getRoot()
 const p = root.ele("PARAMETERS");
