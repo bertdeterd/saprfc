@@ -82,6 +82,7 @@ rfcbuilder.prototype.abapBoolean = function(b){
   rfcbuilder.convertAbapMessageType = function(t){
     switch(t){
       case 'S': return "success"; 
+      case "": return "success";
       case 'E': return "error"; 
       case 'W': return "warning"; 
       case 'I': return "information"; 
