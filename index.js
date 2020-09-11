@@ -1,5 +1,5 @@
 import xmlbuilder from "xmlbuilder";
-import axios from "axios";
+//import axios from "axios";
 import xml2js from "xml2js";
 
 const rfcbuilder = function(name) {
@@ -37,8 +37,9 @@ rfcbuilder.prototype.call = async function(req) {
 
   const fetchData = { method: 'POST', body: this.request, headers: { 'Content-Type': 'text/xml' } }
   const r = await fetch( process.env.VUE_APP_SAPSOAPURI || process.env.REACT_APP_SAPSOAPURI , fetchData )
-  const d = await r.text()
-  return d;
+  return await r.text()
+  
+  //axios disabled. see top of page
   //return await axios.post(process.env.VUE_APP_SAPSOAPURI || process.env.REACT_APP_SAPSOAPURI , this.request, {
   //  headers: { "Content-Type": "text/xml" },
   //});
