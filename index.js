@@ -53,7 +53,8 @@ rfcbuilder.prototype.json = function(resp) {
     tagNameProcessors: [stripPrefix],
     attrNameProcessors: [stripPrefix],
   });
-  parser.parseString(resp.data, function(err, result) {
+  //parser.parseString(resp.data, function(err, result) {
+    parser.parseString(resp, function(err, result) {
     res = result.Envelope.Body[that._responsetag];
     delete res.$;
   });
