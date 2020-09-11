@@ -36,7 +36,9 @@ rfcbuilder.prototype.call = async function(req) {
   }
 
   const fetchData = { method: 'POST', body: this.request, headers: { 'Content-Type': 'text/xml' } }
-  return await fetch( process.env.VUE_APP_SAPSOAPURI || process.env.REACT_APP_SAPSOAPURI , fetchData )
+  const r = await fetch( process.env.VUE_APP_SAPSOAPURI || process.env.REACT_APP_SAPSOAPURI , fetchData )
+  const d = await r.text()
+  return d;
   //return await axios.post(process.env.VUE_APP_SAPSOAPURI || process.env.REACT_APP_SAPSOAPURI , this.request, {
   //  headers: { "Content-Type": "text/xml" },
   //});
