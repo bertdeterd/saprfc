@@ -86,7 +86,8 @@ rfcbuilder.prototype.abapBoolean = function(b){
   };
 
   rfcbuilder.toABAPArray = function(arr){
-    return arr.map( i => { item: i } )
+    const mappedArr = arr.map( i => { item: i } )
+    return mappedArr
   }
 
   rfcbuilder.convertAbapMessageType = function(t){
