@@ -37,6 +37,10 @@ rfcbuilder.prototype.call = async function(req) {
 
   const fetchData = { method: 'POST', body: this.request, headers: { 'Content-Type': 'text/xml' } }
   const r = await fetch( process.env.VUE_APP_SAPSOAPURI || process.env.REACT_APP_SAPSOAPURI , fetchData )
+
+  if(r==undefined){
+    throw new Error(`Call to ${name} failed`)
+  }
   return await r.text()
   
   //axios disabled. see top of page
