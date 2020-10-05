@@ -90,7 +90,7 @@ rfcbuilder.prototype.abapBoolean = function(b){
     return mappedArr
   }
 
-  rfcbuilder.prototype.toJSArray = function(r) {
+  rfcbuilder.toJSArray = function(r) {
     switch (typeof r) {
       case "string":
         return [];
