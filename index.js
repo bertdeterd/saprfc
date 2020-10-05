@@ -90,6 +90,19 @@ rfcbuilder.prototype.abapBoolean = function(b){
     return mappedArr
   }
 
+  rfcbuilder.prototype.toJSArray = function(r) {
+    switch (typeof r) {
+      case "string":
+        return [];
+      case "undefined":
+        return [];  
+      case undefined:
+        return [];  
+      case "object":
+        return Array.isArray(r) ? r : [r];
+    }
+  };
+
   rfcbuilder.convertAbapMessageType = function(t){
     switch(t){
       case 'S': return "success"; 
