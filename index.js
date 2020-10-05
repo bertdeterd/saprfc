@@ -38,11 +38,12 @@ rfcbuilder.prototype.call = async function (req) {
   try {
     const fetchData = { method: 'POST', body: this.request, headers: { 'Content-Type': 'text/xml' } }
     const r = await fetch(process.env.VUE_APP_SAPSOAPURI || process.env.REACT_APP_SAPSOAPURI, fetchData)
+    return await r.text()
   } catch (e) {
     throw new Error(`Call to ${name} failed`)
   }
 
-  return await r.text()
+  
 
   //axios disabled. see top of page
   //return await axios.post(process.env.VUE_APP_SAPSOAPURI || process.env.REACT_APP_SAPSOAPURI , this.request, {
