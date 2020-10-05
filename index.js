@@ -40,7 +40,7 @@ rfcbuilder.prototype.call = async function (req) {
     const r = await fetch(process.env.VUE_APP_SAPSOAPURI || process.env.REACT_APP_SAPSOAPURI, fetchData)
     return await r.text()
   } catch (e) {
-    throw new Error(`Call to ${name} failed`)
+    throw new Error(`Call to ${this.name} failed`)
   }
 
   
