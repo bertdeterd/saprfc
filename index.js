@@ -69,6 +69,9 @@ rfcbuilder.prototype.json = function (resp) {
 };
 
 rfcbuilder.prototype.castToArray = function (r) {
+  if(r==undefined){
+    return []
+  }
   switch (typeof r) {
     case "string":
       return [];
