@@ -100,13 +100,13 @@ rfcbuilder.toABAPArray = function (arr) {
 rfcbuilder.bapiretOK = function (ret) {
   switch (ret.TYPE) {
     case "E":
-      return "";
+      return false;
     case "A":
-      return "";
+      return false;
     case "X":
-      return "";  
+      return false;  
     default:
-      return "X";
+      return true;
   }
 }
 
