@@ -96,6 +96,20 @@ rfcbuilder.toABAPArray = function (arr) {
   return mappedArr
 }
 
+
+rfcbuilder.bapiretOK = function (ret) {
+  switch (ret.TYPE) {
+    case "E":
+      return "";
+    case "A":
+      return "";
+    case "X":
+      return "";  
+    default:
+      return "X";
+  }
+}
+
 rfcbuilder.toJSArray = function (r) {
   switch (typeof r) {
     case "string":
