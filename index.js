@@ -43,7 +43,7 @@ rfcbuilder.prototype.call = async function (req) {
     throw new Error(`Call to ${this.name} failed`)
   }
 
-  
+
 
   //axios disabled. see top of page
   //return await axios.post(process.env.VUE_APP_SAPSOAPURI || process.env.REACT_APP_SAPSOAPURI , this.request, {
@@ -69,7 +69,7 @@ rfcbuilder.prototype.json = function (resp) {
 };
 
 rfcbuilder.prototype.castToArray = function (r) {
-  if(r==undefined){
+  if (r == undefined) {
     return []
   }
   switch (typeof r) {
@@ -107,10 +107,35 @@ rfcbuilder.bapiretOK = function (ret) {
     case "A":
       return false;
     case "X":
-      return false;  
+      return false;
     default:
       return true;
   }
+}
+
+
+
+rfcbuilder.bapiretTabOK = function (tab) {
+  let hasError = false
+  if (tab == "") {
+    return true
+  }
+
+  if (typeof tab === 'object') {
+    if (tab.item.TYPE == "S" || tab.item.TYPE == "W" || tab.item.TYPE == "") {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  tab.item.forEach(x => {
+    if (x.TYPE == "E" || x.TYPE == "X" || x.TYPE == "A") {
+      hasError = true
+    }
+  })
+
+  return !hasError
 }
 
 rfcbuilder.toJSArray = function (r) {
