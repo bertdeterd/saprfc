@@ -29,6 +29,7 @@ rfcbuilder.prototype.getRequest = function () {
 };
 
 rfcbuilder.prototype.call = async function (req) {
+  console.debug(`Calling: ${this.name}`)
   if (req) this.setRequest(req);
   if (!this.request) {
     this.requestbody = this.root.end({ pretty: false });
